@@ -1,0 +1,6 @@
+<select  id="selectBox" (change)="updateChart($event)" >
+  <option value="0">Select</option>
+  <option *ngFor="let obj of selectboxData" value="{{obj}}">{{obj}}</option>
+</select>
+
+<div #chart id="chart" (window:resize)="onResize($event)"></div>
